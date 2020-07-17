@@ -1,0 +1,50 @@
+https://blog.csdn.net/colddie/article/details/78554206
+
+
+ 两个基本的cite命令是：citet 和 citep，区别如下：
+
+citet{jon90}    -->    Jones et al. (1990)
+
+citet[chap. 2]{jon90}    -->    Jones et al. (1990, chap. 2)
+
+citep{jon90}    -->    (Jones et al., 1990)
+
+citep[chap. 2]{jon90}    -->    (Jones et al., 1990, chap. 2)
+
+citep[see][]{jon90}    -->    (see Jones et al., 1990)
+
+citep[see][chap. 2]{jon90}    -->    (see Jones et al., 1990, chap. 2)
+
+citet*{jon90}    -->    Jones, Baker, and Williams (1990)
+
+citep*{jon90}    -->    (Jones, Baker, and Williams, 1990)
+
+此外还有诸如只引作者名字的citeauthor，citeyear
+citeauthor{jon90} 	   -->     	Jones et al.
+citeauthor*{jon90} 	   -->     	Jones, Baker, and Williams
+citeyear{jon90} 	   -->     	1990
+citeyearpar{jon90} 	   -->     	(1990)
+
+多个参考文献引用：
+citet{jon90,jam91} 	   -->     	Jones et al. (1990); James et al. (1991)
+citep{jon90,jam91} 	   -->     	(Jones et al., 1990; James et al. 1991)
+citep{jon90,jon91} 	   -->     	(Jones et al., 1990, 1991)
+citep{jon90a,jon90b} 	   -->     	(Jones et al., 1990a,b)
+
+不同的latex编译环境下有不同额格式，如：
+citet{jon90} 	   -->     	Jones et al. [21]
+citet[chap. 2]{jon90} 	   -->     	Jones et al. [21, chap. 2]
+citep{jon90} 	   -->     	[21]
+citep[chap. 2]{jon90} 	   -->     	[21, chap. 2]
+citep[see][]{jon90} 	   -->     	[see 21]
+citep[see][chap. 2]{jon90} 	   -->     	[see 21, chap. 2]
+citep{jon90a,jon90b} 	   -->     	[21, 32]
+
+此外，还有以上两个命令对应的去掉括号的命令：
+citealt{jon90} 	   -->     	Jones et al. 1990
+citealt*{jon90} 	   -->     	Jones, Baker, and Williams 1990
+citealp{jon90} 	   -->     	Jones et al., 1990
+citealp*{jon90} 	   -->     	Jones, Baker, and Williams, 1990
+citealp{jon90,jam91} 	   -->     	Jones et al., 1990; James et al., 1991
+citealp[pg. 32]{jon90} 	   -->     	Jones et al., 1990, pg. 32
+citetext{priv. comm.} 	   -->     	(priv. comm.)
